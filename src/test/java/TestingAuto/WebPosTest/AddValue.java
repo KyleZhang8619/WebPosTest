@@ -28,7 +28,7 @@ public class AddValue {
 		iewb = new InternetExplorerDriver(caps);
 	} 	
   
-  @Test
+  @Test(groups={"sit"})
   public void testAddValue(){
 	  this.iewb.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 	  this.iewb.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);

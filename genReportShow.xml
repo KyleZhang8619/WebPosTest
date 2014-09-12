@@ -1,0 +1,20 @@
+<project name="FireflyAutomation" basedir=".">
+    <property name="LIB" value="${basedir}/lib" />
+    <path id="test.classpath">
+         <fileset dir="${LIB}">
+            <include name="**/*.jar" />
+        </fileset>
+    </path>
+     
+    <target name="testcase">
+        <property name="dir" value=""/>
+    	<delete dir="${test.dir}/single/output"/>
+        <mkdir dir="${basedir}/output"/>
+
+        <xslt in="${basedir}/test-output/testng-results.xml" style="${basedir}/test-output/testng-results.xsl" out="${basedir}/test-output/index3.html" >
+        	<param name= "testNgXslt.outputDir" expression= "D:/eclipse-workspace/KargoCard/WebPosTest/test-output" />
+        	<classpath refid= "test.classpath" />
+        </xslt>
+    </target>
+	
+</project>

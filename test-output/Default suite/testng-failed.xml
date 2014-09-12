@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="TestingAuto.WebPosTest.Prepaid_CheckCard">
+      <class name="TestingAuto.WebPosTest.AddDays">
         <methods>
           <include name="afterClass"/>
-          <include name="testCheckCardWrongNum"/>
+          <include name="testAddDays"/>
           <include name="launchIE"/>
-          <include name="testCheckCard"/>
         </methods>
-      </class> <!-- TestingAuto.WebPosTest.Prepaid_CheckCard -->
+      </class> <!-- TestingAuto.WebPosTest.AddDays -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

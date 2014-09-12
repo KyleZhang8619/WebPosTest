@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34282" started-at="2014-08-08T03:48:13Z" finished-at="2014-08-08T03:48:47Z">
+  <suite name="Default suite" duration-ms="32507" started-at="2014-09-12T03:00:49Z" finished-at="2014-09-12T03:01:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34282" started-at="2014-08-08T03:48:13Z" finished-at="2014-08-08T03:48:47Z">
-      <class name="TestingAuto.WebPosTest.AddValue">
-        <test-method status="PASS" signature="launchIE()[pri:0, instance:TestingAuto.WebPosTest.AddValue@b42cbf]" name="launchIE" is-config="true" duration-ms="5704" started-at="2014-08-08T11:48:13Z" finished-at="2014-08-08T11:48:19Z">
+    <test name="Default test" duration-ms="32507" started-at="2014-09-12T03:00:49Z" finished-at="2014-09-12T03:01:22Z">
+      <class name="TestingAuto.WebPosTest.AddDays">
+        <test-method status="PASS" signature="launchIE()[pri:0, instance:TestingAuto.WebPosTest.AddDays@6f7ce9]" name="launchIE" is-config="true" duration-ms="5658" started-at="2014-09-12T11:00:49Z" finished-at="2014-09-12T11:00:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchIE -->
-        <test-method status="PASS" signature="testAddValue()[pri:0, instance:TestingAuto.WebPosTest.AddValue@b42cbf]" name="testAddValue" duration-ms="26389" started-at="2014-08-08T11:48:19Z" finished-at="2014-08-08T11:48:45Z">
+        <test-method status="PASS" signature="testAddDays()[pri:0, instance:TestingAuto.WebPosTest.AddDays@6f7ce9]" name="testAddDays" duration-ms="25703" started-at="2014-09-12T11:00:55Z" finished-at="2014-09-12T11:01:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddValue -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:TestingAuto.WebPosTest.AddValue@b42cbf]" name="afterClass" is-config="true" duration-ms="2171" started-at="2014-08-08T11:48:45Z" finished-at="2014-08-08T11:48:47Z">
+        </test-method> <!-- testAddDays -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:TestingAuto.WebPosTest.AddDays@6f7ce9]" name="afterClass" is-config="true" duration-ms="1134" started-at="2014-09-12T11:01:21Z" finished-at="2014-09-12T11:01:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- TestingAuto.WebPosTest.AddValue -->
+      </class> <!-- TestingAuto.WebPosTest.AddDays -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

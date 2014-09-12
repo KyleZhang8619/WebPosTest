@@ -23,7 +23,7 @@ public class TransferFunds {
 	private String projectpath = System.getProperty("user.dir");
   @BeforeClass
   public void launchIE() {
-		System.setProperty("webdriver.ie.driver", projectpath+"/tool/IEDriverServer.exe");
+	  System.setProperty("webdriver.ie.driver", projectpath+"/tool/IEDriverServer.exe");
 	    caps = DesiredCapabilities.internetExplorer();
 		caps.setCapability(InternetExplorerDriver.FORCE_CREATE_PROCESS, false);
 		caps.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);   
@@ -31,6 +31,7 @@ public class TransferFunds {
 		caps.setCapability("ignoreZoomSetting", true);
 		iewb = new InternetExplorerDriver(caps);
 	  }
+	  
   @Test
   public void testTransferFunds() {
 	  this.iewb.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);

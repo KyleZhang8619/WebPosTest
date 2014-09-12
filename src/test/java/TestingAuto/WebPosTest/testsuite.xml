@@ -1,0 +1,15 @@
+<suite name="KyleAutomation" >
+    <parameter name="WebPos" value="Internet"/>
+    
+	 <test name="Test1" preserve-order="true" >
+	     <parameter name="browsername" value="ie"/>
+	     
+		<classes>		    			
+			<class name="WebPosTest.src.test.java.TestingAuto.WebPosTest.AddDays"/>			
+		    <class name="WebPosTest.src.test.java.TestingAuto.WebPosTest.CashOut"/>
+		      
+		        
+		</classes>
+	</test> 
+
+</suite>  
