@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="TestingAuto.WebPosTest.AddDays">
+      <class name="TestingAuto.WebPosTest.CashOut">
         <methods>
-          <include name="afterClass"/>
-          <include name="testAddDays"/>
+          <include name="testCashOut"/>
           <include name="launchIE"/>
+          <include name="afterClass"/>
         </methods>
-      </class> <!-- TestingAuto.WebPosTest.AddDays -->
+      </class> <!-- TestingAuto.WebPosTest.CashOut -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
