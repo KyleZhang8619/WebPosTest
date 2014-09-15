@@ -28,7 +28,7 @@ public class AddValue {
 		iewb = new InternetExplorerDriver(caps);
 	} 	
   
-  @Test(groups={"sit"})
+  @Test
   public void testAddValue(){
 	  this.iewb.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 	  this.iewb.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
@@ -36,7 +36,7 @@ public class AddValue {
 	  this.iewb.findElement(By.id("btn_prepaid")).click();
 	  this.iewb.findElement(By.linkText("Type card number")).click();
 	//  this.iewb.findElement(By.name("cardno")).clear();
-	  this.iewb.findElement(By.name("cardno")).sendKeys("8888880050000822");
+	  this.iewb.findElement(By.xpath("//input[@name='cardno']")).sendKeys("8888880050000822");
 	  this.iewb.findElement(By.id("submit_checkcardno")).click();
 	  this.iewb.findElement(By.id("addvalue")).click();
 	  this.iewb.findElement(By.id("input_amount")).click();

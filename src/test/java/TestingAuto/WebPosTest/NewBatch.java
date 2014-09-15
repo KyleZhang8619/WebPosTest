@@ -168,7 +168,7 @@ public void testNewBatch_BoxID(){
 
 @AfterClass
 public void afterClass() {
-	// this.iewb.quit();
+	 this.iewb.quit();
 }
 
 

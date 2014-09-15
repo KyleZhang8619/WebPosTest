@@ -19,6 +19,7 @@ public class purchaseItems {
 	String passWord = "123456"; //密码
 	String terminalName = "test311999999"; //终端名字
 	String number = "RMB -100.00";
+	String CardNO = "8888880050000814";
 	private WebDriver iewb = null;
 	private DesiredCapabilities caps = null;
 	private String projectpath = System.getProperty("user.dir");
@@ -41,7 +42,7 @@ public class purchaseItems {
 	    this.iewb.findElement(By.id("btn_prepaid")).click();
 	    this.iewb.findElement(By.linkText("Type card number")).click();
 	 //   this.iewb.findElement(By.name("cardno")).clear();
-	    this.iewb.findElement(By.name("cardno")).sendKeys("8888880050000814");
+	    this.iewb.findElement(By.xpath("//input[@name='cardno']")).sendKeys(CardNO);
 	    this.iewb.findElement(By.id("submit_checkcardno")).click();
 	    this.iewb.findElement(By.id("purchaseitems")).click();
 	    this.iewb.findElement(By.id("input_amount")).clear();
@@ -62,7 +63,7 @@ public class purchaseItems {
 	    this.iewb.findElement(By.id("btn_prepaid")).click();
 	    this.iewb.findElement(By.linkText("Type card number")).click();
 	    this.iewb.findElement(By.name("cardno")).clear();
-	    this.iewb.findElement(By.name("cardno")).sendKeys("8888880050000822");
+	    this.iewb.findElement(By.xpath("//input[@name='cardno']")).sendKeys(CardNO);
 	    this.iewb.findElement(By.id("submit_checkcardno")).click();
 	    this.iewb.findElement(By.id("purchaseitems")).click();
 	    this.iewb.findElement(By.id("input_amount")).clear();
@@ -84,7 +85,7 @@ public void testPurchaseItemsNotAmount(){
     this.iewb.findElement(By.id("btn_prepaid")).click();
     this.iewb.findElement(By.linkText("Type card number")).click();
     this.iewb.findElement(By.name("cardno")).clear();
-    this.iewb.findElement(By.name("cardno")).sendKeys("8888880050000830");
+    this.iewb.findElement(By.xpath("//input[@name='cardno']")).sendKeys(CardNO);
     this.iewb.findElement(By.id("submit_checkcardno")).click();
     this.iewb.findElement(By.id("purchaseitems")).click();
     this.iewb.findElement(By.id("input_amount")).clear();

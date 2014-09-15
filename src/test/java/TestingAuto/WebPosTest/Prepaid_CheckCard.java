@@ -41,7 +41,7 @@ public class Prepaid_CheckCard {
 	 // this.iewb.findElement(By.cssSelector(p, a)).click();
 	  this.iewb.findElement(By.linkText("Type card number")).click();
 //	  this.iewb.findElement(By.name("cardno")).clear();
-	  this.iewb.findElement(By.name("cardno")).sendKeys("8888880050000814");
+	  this.iewb.findElement(By.xpath("//input[@name='cardno']")).sendKeys("8888880050000814");
 	  this.iewb.findElement(By.id("submit_checkcardno")).click();
 	  this.iewb.findElement(By.id("balance")).click();
 	  String Value = this.iewb.findElement(By.className("successMessage")).getText();

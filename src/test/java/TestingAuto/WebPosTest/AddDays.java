@@ -40,7 +40,7 @@ public class AddDays {
 	  this.login(userName, passWord);
 	  this.iewb.findElement(By.id("btn_prepaid")).click();
 	  this.iewb.findElement(By.linkText("Type card number")).click();
-	  this.iewb.findElement(By.name("cardno")).sendKeys(CardNO);
+	  this.iewb.findElement(By.xpath("//input[@name='cardno']")).sendKeys(CardNO);
 	  this.iewb.findElement(By.id("submit_checkcardno")).click();
 	  this.iewb.findElement(By.id("adddays")).click();  
 	  Select selectMonth = new Select(iewb.findElement(By.id("select_addMonth")));

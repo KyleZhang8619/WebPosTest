@@ -39,7 +39,7 @@ public class TransferFunds {
 	  this.login(userName, passWord);
 	  this.iewb.findElement(By.id("btn_prepaid")).click();
 	  this.iewb.findElement(By.linkText("Type card number")).click();
-	  this.iewb.findElement(By.name("cardno")).sendKeys(FromCardNO);
+	  this.iewb.findElement(By.xpath("//input[@name='cardno']")).sendKeys(FromCardNO);
 	  this.iewb.findElement(By.id("submit_checkcardno")).click();
 	  this.iewb.findElement(By.id("transferfunds")).click();
 	  this.iewb.findElement(By.id("a_changeinput")).click();
