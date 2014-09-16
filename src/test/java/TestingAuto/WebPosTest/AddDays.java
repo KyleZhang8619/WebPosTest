@@ -6,15 +6,18 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
 public class AddDays {
-	String userName = "000519"; //用户名
+	String userName = "000520"; //用户名
 	String passWord = "123456"; //密码
 	String terminalName = "test311999999"; //终端名字
 	String CardNO = "8888880050000780"; 
@@ -40,9 +43,17 @@ public class AddDays {
 	  this.login(userName, passWord);
 	  this.iewb.findElement(By.id("btn_prepaid")).click();
 	  this.iewb.findElement(By.linkText("Type card number")).click();
-	  this.iewb.findElement(By.xpath("//input[@name='cardno']")).sendKeys(CardNO);
+	  this.iewb.findElement(By.xpath("//input[@name='cardno']")).sendKeys("8888880050000780");
 	  this.iewb.findElement(By.id("submit_checkcardno")).click();
+	  WebElement e = ( new WebDriverWait( iewb, 10 )) .until(    
+		 	     new ExpectedCondition< WebElement>(){                
+		 	         public WebElement apply( WebDriver d) {          
+		 	             return d.findElement( By.id( "adddays" ));
+		 	         }                                                
+		 	     }                                                    
+		 	);        
 	  this.iewb.findElement(By.id("adddays")).click();  
+     // this.iewb.findElement(By.xpath("//a[text()='Add Days']")).click();
 	  Select selectMonth = new Select(iewb.findElement(By.id("select_addMonth")));
       selectMonth.selectByValue("5");
       this.iewb.findElement(By.id("submit_adddays")).click();
@@ -72,7 +83,7 @@ public class AddDays {
   
   @AfterClass
   public void afterClass() {
-	  this.iewb.quit();
+	 // this.iewb.quit();
   }
   
   

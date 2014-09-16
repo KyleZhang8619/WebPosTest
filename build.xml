@@ -15,7 +15,7 @@
 
         <xslt in= "D:\eclipse-workspace\KargoCard\WebPosTest\test-output\testng-results.xml" style= "D:\eclipse-workspace\KargoCard\WebPosTest\test-output\testng-results.xsl"
 
-  out= "D:\eclipse-workspace\KargoCard\WebPosTest\test-output\index1.html" >
+  out= "D:\eclipse-workspace\KargoCard\WebPosTest\test-output\index16.html" >
 
              <!-- you need to specify the directory here again -->
 

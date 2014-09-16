@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
-public class purchaseItems {
+public class PurchaseItems {
 	String userName = "000519"; //用户名
 	String passWord = "123456"; //密码
 	String terminalName = "test311999999"; //终端名字

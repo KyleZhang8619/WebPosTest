@@ -1,11 +1,18 @@
 package TestingAuto.WebPosTest;
 
-import static org.junit.Assert.assertEquals;
+import static org.testng.AssertJUnit.assertEquals;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
+import org.bouncycastle.jcajce.provider.asymmetric.DH;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
@@ -17,6 +24,7 @@ public class AddValue {
 	private WebDriver iewb = null;
 	private DesiredCapabilities caps = null;
 	private String projectpath = System.getProperty("user.dir");
+	//private Do du;
   @BeforeClass
   public void launchIE(){
 		System.setProperty("webdriver.ie.driver", projectpath+"/tool/IEDriverServer.exe");
@@ -30,6 +38,7 @@ public class AddValue {
   
   @Test
   public void testAddValue(){
+	  
 	  this.iewb.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 	  this.iewb.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
 	  this.login(userName, passWord);
@@ -38,7 +47,19 @@ public class AddValue {
 	//  this.iewb.findElement(By.name("cardno")).clear();
 	  this.iewb.findElement(By.xpath("//input[@name='cardno']")).sendKeys("8888880050000822");
 	  this.iewb.findElement(By.id("submit_checkcardno")).click();
-	  this.iewb.findElement(By.id("addvalue")).click();
+	  WebElement e = ( new WebDriverWait( iewb, 10 )) .until(    
+		 	     new ExpectedCondition< WebElement>(){                
+		 	         public WebElement apply( WebDriver d) {          
+		 	             return d.findElement( By.id( "addvalue" ));
+		 	         }                                                
+		 	     }                                                    
+		 	);        
+	//  Actions action = new Actions(iewb);
+	//  WebElement onElement = this.iewb.findElement(By.id("addvalue")); 
+	//  action.moveToElement(onElement).clickAndHold();
+	 this.iewb.findElement(By.id("addvalue")).click();
+	  
+	  
 	  this.iewb.findElement(By.id("input_amount")).click();
 	  this.iewb.findElement(By.id("input_amount")).clear();
 	  this.iewb.findElement(By.id("input_amount")).sendKeys("50");
@@ -71,7 +92,7 @@ public class AddValue {
 
   @AfterClass
   public void afterClass() {
-	this.iewb.quit();
+//	this.iewb.quit();
   }
 
 }

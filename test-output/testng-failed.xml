@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [KyleAutomation]">
+  <parameter name="browsername" value="ie"/>
+  <parameter name="WebPos" value="Internet"/>
+  <test name="Test1(failed)">
+    <parameter name="browsername" value="ie"/>
     <classes>
       <class name="TestingAuto.WebPosTest.CashOut">
         <methods>
@@ -10,6 +13,12 @@
           <include name="afterClass"/>
         </methods>
       </class> <!-- TestingAuto.WebPosTest.CashOut -->
+      <class name="TestingAuto.WebPosTest.AddDays">
+        <methods>
+          <include name="afterClass"/>
+          <include name="launchIE"/>
+        </methods>
+      </class> <!-- TestingAuto.WebPosTest.AddDays -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [KyleAutomation] -->

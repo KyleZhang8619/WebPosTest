@@ -7,8 +7,11 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
@@ -39,8 +42,15 @@ public class CashOut {
 	  this.login(userName, passWord);
 	  this.iewb.findElement(By.id("btn_prepaid")).click();
 	  this.iewb.findElement(By.linkText("Type card number")).click();
-	  this.iewb.findElement(By.xpath("//input[@name='cardno']")).sendKeys(CardNO);
+	  this.iewb.findElement(By.xpath("//input[@name='cardno']")).sendKeys("8888880050000780");
 	  this.iewb.findElement(By.id("submit_checkcardno")).click();
+	  WebElement e = ( new WebDriverWait( iewb, 10 )) .until(    
+		 	     new ExpectedCondition< WebElement>(){                
+		 	         public WebElement apply( WebDriver d) {          
+		 	             return d.findElement( By.id( "cashout" ));
+		 	         }                                                
+		 	     }                                                    
+		 	);        
 	  this.iewb.findElement(By.id("cashout")).click();  
 	  this.iewb.findElement(By.id("submit_cashout")).click();
 	  Alert alert = iewb.switchTo().alert(); // 把焦点切换到警告对话框
