@@ -60,9 +60,9 @@ public class CashOut {
       assertEquals(expectedText, actualText); // 和期望的内容进行对比
       alert.accept(); // 点击“OK”（或者“确定”）
       String Value = this.iewb.findElement(By.className("alt")).getText();//获取字符串
-      String expected = "RMB 20.00";//预期结果
-      System.out.println("------------------" + Value.substring(7));
-      assertEquals(expected, Value.substring(7));//截取字符串，断言
+      String expected = " 20.00";//预期结果
+      System.out.println("------------------" + Value.substring(15));
+      assertEquals(expected, Value.substring(15));//截取字符串，断言
       this.iewb.findElement(By.linkText("Done")).click();
   }
   public void login(String userName,String passWord){

@@ -35,7 +35,7 @@ public class NewBatch {
 		caps.setCapability("ignoreZoomSetting", true);
 		iewb = new InternetExplorerDriver(caps);
 	} 	
-  //@Test
+  @Test
   public void testNewBatch_uploadFile() {
 	  this.iewb.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 	  this.iewb.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
@@ -65,7 +65,7 @@ public class NewBatch {
       alert.accept(); // 点击“OK”（或者“确定”）
       
       this.logout();
-      this.ApprovalBatch();
+  //    this.ApprovalBatch();
   }
       
 //@Test
@@ -95,7 +95,7 @@ public void testNewBatch_BoxID(){
 }
   
   
- @Test
+ //@Test
  public void testNewBatch_InnerpackID(){
 	 this.iewb.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 	 this.iewb.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);

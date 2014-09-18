@@ -92,7 +92,7 @@ public class AddValue {
 
   @AfterClass
   public void afterClass() {
-//	this.iewb.quit();
+	this.iewb.quit();
   }
 
 }

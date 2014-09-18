@@ -6,9 +6,13 @@
 	     
 		<classes>		    			
 			<class name="TestingAuto.WebPosTest.AddDays"/>			
-		    <class name="TestingAuto.WebPosTest.CashOut"/>
-		      
-		        
+		    <class name="TestingAuto.WebPosTest.AddValue"/>
+		     <class name="TestingAuto.WebPosTest.CheckStatus"/>
+		     <class name="TestingAuto.WebPosTest.LoginWebPos"/>
+		     <class name="TestingAuto.WebPosTest.Prepaid_CheckCard"/>
+		     <class name="TestingAuto.WebPosTest.PurchaseItems"/>
+		     <class name="TestingAuto.WebPosTest.TransferFunds"/> 
+		        <class name="TestingAuto.WebPosTest.CashOut"/>
 		</classes>
 	</test> 
 

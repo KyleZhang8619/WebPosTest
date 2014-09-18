@@ -7,8 +7,11 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
@@ -33,7 +36,7 @@ public class Prepaid_NewCardSale {
 		iewb = new InternetExplorerDriver(caps);
 	} 	
   
-  @Test  
+ // @Test  
   public void testNewCardSale(){
 	  this.iewb.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
 	  this.iewb.manage().timeouts().pageLoadTimeout(8, TimeUnit.SECONDS);
@@ -61,10 +64,19 @@ public class Prepaid_NewCardSale {
 	  this.login(userName, passWord);
 	  this.iewb.findElement(By.id("btn_prepaid")).click();
 	  this.iewb.findElement(By.linkText("Type card number")).click();                                   
-	  this.iewb.findElement(By.name("cardno")).clear();
+	//  this.iewb.findElement(By.name("cardno")).clear();
+	  
 	  this.iewb.findElement(By.xpath("//input[@name='cardno']")).sendKeys("8888880050000814");
       this.iewb.findElement(By.id("submit_checkcardno")).click();
-      this.iewb.findElement(By.linkText("New Card Sale")).click();
+      WebElement e = ( new WebDriverWait( iewb, 10 )) .until(    
+		 	     new ExpectedCondition< WebElement>(){                
+		 	         public WebElement apply( WebDriver d) {          
+		 	             return d.findElement( By.id( "newcardsale" ));
+		 	         }                                                
+		 	     }                                                    
+		 	);        
+	  this.iewb.findElement(By.id("newcardsale")).click();
+  //  this.iewb.findElement(By.linkText("New Card Sale")).click();
       this.iewb.findElement(By.id("submit_newcardsale")).click();
       String Value1 = this.iewb.findElement(By.className("infoTable")).getText();
       System.out.println("------------------" + Value1);

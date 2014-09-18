@@ -78,7 +78,7 @@ public class Prepaid_CheckCard {
 	  this.iewb.findElement(By.id("btn_prepaid")).click();
 	  this.iewb.findElement(By.linkText("Type card number")).click();
 //	  this.iewb.findElement(By.name("cardno")).clear();
-	  this.iewb.findElement(By.name("cardno")).sendKeys("8454545");
+	  this.iewb.findElement(By.xpath("//input[@name='cardno']")).sendKeys("8454545");
 	  
 	  this.iewb.findElement(By.id("submit_checkcardno")).click();
 	  String actual = this.iewb.findElement(By.className("infoTable")).getText();
@@ -116,7 +116,7 @@ public class Prepaid_CheckCard {
   
   @AfterClass
   public void afterClass() {
-	  this.iewb.quit();
+	//  this.iewb.quit();
 
   }
 
